@@ -1,0 +1,52 @@
+.galleryWrapper {
+  width: 100%;
+  min-height: 100vh; // full section height
+  display: flex;
+  justify-content: center; // horizontal center
+  align-items: center; // vertical center
+}
+
+.sliderWrapper {
+  width: 95%;
+  max-width: 1000px;
+}
+
+.slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+/* Center slide scale */
+.slick-center img {
+  transform: scale(1.1);
+}
+
+/* Dim side slides */
+.slick-slide {
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.slick-center {
+  opacity: 1;
+}
+
+/* Arrow styling */
+.slick-prev:before,
+.slick-next:before {
+  color: #ff4fa3;
+  font-size: 28px;
+}
+
+.slick-dots li button:before {
+  color: #ff4fa3;
+}

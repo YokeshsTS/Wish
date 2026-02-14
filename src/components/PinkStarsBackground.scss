@@ -1,0 +1,96 @@
+// Number of stars generator
+@function multiple-box-shadow($n, $color) {
+  $value: "#{random(2000)}px #{random(2000)}px #{$color}";
+  @for $i from 2 through $n {
+    $value: "#{$value}, #{random(2000)}px #{random(2000)}px #{$color}";
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700, white);
+$shadows-medium: multiple-box-shadow(200, #ff69b4);
+$shadows-big: multiple-box-shadow(100, white);
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at bottom,
+    #fff0f6 0%,
+    #ffb6d9 60%,
+    #ff69b4 100%
+  );
+}
+
+/* ⭐ Small Stars */
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    box-shadow: $shadows-small;
+  }
+}
+
+/* ⭐⭐ Medium Stars */
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    box-shadow: $shadows-medium;
+  }
+}
+
+/* ⭐⭐⭐ Big Stars */
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    box-shadow: $shadows-big;
+  }
+}
+
+/* 🌸 Animation */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
