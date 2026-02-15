@@ -1,0 +1,64 @@
+.scrollSection {
+  height: 200vh; // Standard fixed height section
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnsWrapper {
+  display: flex;
+  gap: 80px;
+  perspective: 1200px;
+  align-items: center;
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  will-change: transform;
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .columnThree {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .columnFour {
+    display: none;
+  }
+}
+
+.imageCard {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 5%;
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 250px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

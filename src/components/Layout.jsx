@@ -5,6 +5,7 @@ import PinkStarsBackground from "./PinkStarsBackground";
 import Hero from "./Hero.jsx";
 import StorySection from "./StorySection.jsx";
 import Gallery from "./Gallery.jsx";
+import ScrollGallery from "./ScrollGallery.jsx";
 
 const Layout = () => {
   return (
@@ -19,6 +20,8 @@ const Layout = () => {
         <Hero />
         <StorySection />
         <Gallery />
+        <ScrollGallery />
+        <StorySection />
       </motion.div>
     </div>
   );

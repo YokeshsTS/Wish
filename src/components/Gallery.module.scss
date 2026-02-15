@@ -8,21 +8,26 @@
 
 .sliderWrapper {
   width: 95%;
-  max-width: 1000px;
 }
 
 .slide {
   display: flex !important;
   justify-content: center;
   align-items: center;
+  width: 400px;
+  height: 300px;
+  border: none;
+  outline: none;
 }
 
 .slide img {
-  width: 280px;
-  height: 280px;
+  object-fit: contain;
+  width: 90%;
   object-fit: contain;
   border-radius: 20px;
   transition: transform 0.4s ease;
+  border: none;
+  outline: none;
 }
 
 /* Center slide scale */
