@@ -1,0 +1,98 @@
+.gameSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    font-size: 26px;
+    text-align: center;
+    max-width: 500px;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.buttonContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yesButton {
+  position: absolute;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background: #ff4fa3;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.noButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 240, 246, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 60px;
+    color: #ff4fa3;
+    text-align: center;
+  }
+}
+
+.errorPopup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.99);
+  color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  z-index: 20;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff0000;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+}

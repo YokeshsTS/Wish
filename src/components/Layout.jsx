@@ -6,6 +6,7 @@ import Hero from "./Hero.jsx";
 import StorySection from "./StorySection.jsx";
 import Gallery from "./Gallery.jsx";
 import ScrollGallery from "./ScrollGallery.jsx";
+import BirthdayGame from "./BirthdayGame.jsx";
 
 const Layout = () => {
   return (
@@ -21,7 +22,7 @@ const Layout = () => {
         <StorySection />
         <Gallery />
         <ScrollGallery />
-        <StorySection />
+        <BirthdayGame />
       </motion.div>
     </div>
   );
